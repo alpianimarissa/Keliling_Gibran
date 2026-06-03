@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Math Quest: Perimeter Challenge</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f4f8; color: #2d3436; padding: 20px; }
+        .container { max-width: 800px; background: #ffffff; margin: 0 auto; padding: 30px; border-radius: 20px; border: 3px solid #74b9ff; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        h1 { text-align: center; color: #0984e3; text-transform: uppercase; letter-spacing: 2px; }
+        h2 { color: #0984e3; border-bottom: 3px solid #74b9ff; padding-bottom: 10px; margin-top: 30px; }
+        .question-card { background: #eef6ff; padding: 15px; margin-bottom: 15px; border-radius: 12px; border-left: 6px solid #fdcb6e; color: #2d3436; font-weight: 500; }
+        input[type="text"] { width: 100%; padding: 12px; margin-top: 8px; border: 2px solid #74b9ff; border-radius: 8px; background: #ffffff; color: #0984e3; box-sizing: border-box; font-size: 1em; }
+        button { width: 100%; padding: 18px; background: #fdcb6e; color: #2d3436; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; font-size: 1.2em; margin-top: 25px; transition: 0.3s; }
+        button:hover { background: #ffeaa7; transform: translateY(-2px); }
+        .result { margin-top: 25px; padding: 20px; text-align: center; font-size: 1.5em; display: none; color: #0984e3; border: 3px solid #fdcb6e; border-radius: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Math Quest: Perimeter Challenge</h1>
+    <form id="quiz">
+        
+        <h2>[Diagnostic Phase]</h2>
+        <div class="question-card"><p>Apa perbedaan utama antara menghitung luas dan menghitung keliling berdasarkan pemahamanmu hari ini?</p><input type="text" id="q1" placeholder="Tulis jawabanmu..."></div>
+        <div class="question-card"><p>Jika sebuah bangun memiliki sisi-sisi 5 cm, 7 cm, dan 10 cm, apakah mungkin bangun tersebut adalah sebuah persegi? Jelaskan alasanmu.</p><input type="text" id="q2" placeholder="Tulis jawabanmu..."></div>
+        <div class="question-card"><p>Jika keliling sebuah bangun datar gabungan adalah 100 cm, dan kita menambahkan satu sekat di tengah bangun tersebut, apakah kelilingnya berubah? Jelaskan alasanmu.</p><input type="text" id="q3" placeholder="Tulis jawabanmu..."></div>
+
+        <h2>[Medium Stage]</h2>
+        <div class="question-card"><p>Hitunglah keliling persegi yang memiliki panjang sisi 14 cm.</p><input type="text" id="q4" placeholder="Angka saja"></div>
+        <div class="question-card"><p>Sebuah persegi panjang memiliki panjang 18 cm dan lebar 9 cm. Berapakah kelilingnya?</p><input type="text" id="q5" placeholder="Angka saja"></div>
+        <div class="question-card"><p>Sebuah segitiga sama sisi memiliki panjang salah satu sisinya 12 cm. Hitunglah kelilingnya.</p><input type="text" id="q6" placeholder="Angka saja"></div>
+        <div class="question-card"><p>Keliling sebuah persegi adalah 64 cm. Berapakah panjang masing-masing sisinya?</p><input type="text" id="q7" placeholder="Angka saja"></div>
+        <div class="question-card"><p>Sebuah taman berbentuk persegi panjang dengan keliling 100 meter. Jika panjangnya 30 meter, berapakah lebarnya?</p><input type="text" id="q8" placeholder="Angka saja"></div>
+        <div class="question-card"><p>Andi berlari mengelilingi lapangan berbentuk persegi dengan sisi 20 meter sebanyak 5 kali. Berapa total jarak yang ditempuh Andi?</p><input type="text" id="q9" placeholder="Angka saja"></div>
+        <div class="question-card"><p>Segitiga sama kaki memiliki alas 10 cm dan keliling 36 cm. Berapakah panjang masing-masing sisi kakinya?</p><input type="text" id="q10" placeholder="Angka saja"></div>
+
+        <h2>[Hard Stage]</h2>
+        <div class="question-card"><p>Dua buah persegi dengan sisi 5 cm diletakkan berdampingan sehingga membentuk persegi panjang. Berapakah keliling bangun gabungan tersebut?</p><input type="text" id="q11" placeholder="Angka saja"></div>
+        <div class="question-card"><p>Bandingkan keliling persegi berukuran sisi 10 cm dengan keliling persegi panjang berukuran 12 cm x 8 cm. Mana yang lebih besar?</p><input type="text" id="q12" placeholder="Ketik: persegi atau persegi panjang"></div>
+        <div class="question-card"><p>Sebuah taman berbentuk persegi panjang dengan ukuran 15m x 10m. Di salah satu sudutnya ada area berbentuk persegi 3m x 3m yang dipotong (bentuk L). Berapakah keliling taman tersebut?</p><input type="text" id="q13" placeholder="Angka saja"></div>
+        <div class="question-card"><p>Tentukan keliling dari gabungan dua persegi yang berhimpitan, jika masing-masing persegi memiliki sisi 7 cm.</p><input type="text" id="q14" placeholder="Angka saja"></div>
+        <div class="question-card"><p>Berapakah keliling dari bangun yang terdiri dari persegi panjang (12x6 cm) yang di atasnya ditempelkan persegi dengan sisi 4 cm (sisi persegi menempel pada lebar persegi panjang)?</p><input type="text" id="q15" placeholder="Angka saja"></div>
+        <div class="question-card"><p>Sebuah lapangan berbentuk menyerupai huruf 'T' dengan panjang semua sisi horizontal adalah 4m, 4m, dan 12m, sedangkan sisi vertikalnya adalah 10m dan 3m. Hitunglah total kelilingnya.</p><input type="text" id="q16" placeholder="Angka saja"></div>
+        <div class="question-card"><p>Pak Gibran ingin memasang pagar di sekeliling kebunnya yang berbentuk gabungan persegi panjang (20m x 15m) dan segitiga siku-siku yang menempel pada sisi 15m (dengan tinggi segitiga 8m dan sisi miring 17m). Jika harga pagar Rp 50.000 per meter, berapa total biayanya?</p><input type="text" id="q17" placeholder="Angka saja"></div>
+        <div class="question-card"><p>Bangun datar berundak memiliki 4 anak tangga. Setiap anak tangga memiliki tinggi 2 cm dan lebar 3 cm. Jika bagian bawah bangun berukuran 12 cm dan bagian tegaknya sejajar dengan tangga, hitunglah keliling totalnya.</p><input type="text" id="q18" placeholder="Angka saja"></div>
+        <div class="question-card"><p>Dua buah segitiga sama sisi dengan panjang sisi 15 cm diletakkan saling tumpang tindih sehingga membentuk bintang segi enam yang beraturan. Jika setiap 'lengan' bintang memiliki panjang 5 cm, hitunglah keliling bintang tersebut.</p><input type="text" id="q19" placeholder="Angka saja"></div>
+
+        <button type="button" onclick="submitQuiz()">SUBMIT MISSION</button>
+    </form>
+    <div id="result" class="result"></div>
+</div>
+
+<script>
+    function submitQuiz() {
+        const answers = { q4: "56", q5: "54", q6: "36", q7: "16", q8: "20", q9: "400", q10: "13", q11: "30", q12: "sama besar", q13: "50", q14: "42", q15: "52", q16: "46", q17: "4450000", q18: "40", q19: "60" };
+        let score = 0;
+        for (let i = 4; i <= 19; i++) {
+            let val = document.getElementById("q" + i).value.toLowerCase().trim();
+            if (val === answers["q" + i]) score++;
+        }
+        let res = document.getElementById("result");
+        res.style.display = "block";
+        res.innerHTML = "MISSION COMPLETED! Score: " + score + " / 16";
+    }
+</script>
+</body>
+</html>
